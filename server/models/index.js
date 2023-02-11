@@ -1,6 +1,6 @@
-/**
-* DB models.
-*/
-'use strict';
+"use strict";
+const users = require("./users");
+const products = require("./products");
+const collections = require("./collections");
 
-module.exports = {};
+module.exports = { users, products, collections };

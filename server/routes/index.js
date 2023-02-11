@@ -1,12 +1,11 @@
-/**
-* App routes definitions.
-*/
-'use strict';
+const router = require("express").Router();
 
-let express = require('express');
-let router = express.Router();
-
-// To confirm setup only.
-router.get('/', function(req, res) { return res.send('Hello world!'); });
+router.use("/", async (req, res) => {
+  try {
+    return res.status(200).send({ msg: "Lost and Founds API | Unassigned!" });
+  } catch (err) {
+    return res.status(500).send({ err, msg: "error" });
+  }
+});
 
 module.exports = router;
