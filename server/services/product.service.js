@@ -1,9 +1,9 @@
 const Product = require("../models/product.model");
 
 module.exports = {
-  async getAll() {
+  async getAll(query) {
     try {
-      const products = await Product.find();
+      const products = await Product.find(query);
       return products;
     } catch (err) {
       throw "Error getting products ( " + err + " ) ";
